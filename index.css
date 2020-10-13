@@ -193,6 +193,7 @@ div {
 .pop-info,
 .pop-last {
     display: none;
+    margin: 0 auto;
 }
 
 .e1-pop .pop1 {
