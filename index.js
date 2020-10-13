@@ -305,28 +305,33 @@ $(function () {
 
 
     $(".e2-pop .pop-info .okay").click(function () {
-        if ($("#chkbox0").is(":checked")) {
-
-            if ($(".name-check").val() == '') {
-                alert("정보를 입력해주세요!");
-
-                return ture;
-            } else if ($(".phone-number-check").val() == '') {
+        
+        if ($(".name-check").val() == '') {
+                alert("정보를 입력해주세요!");}
+        
+        else if ($(".phone-number-check").val() == '') {
                 alert("정보를 입력해주세요!");
                 return ture;
-            } else {
+            } 
+        
+              else if ($(".map-check").val() == '') {
+                alert("정보를 입력해주세요!");
+                return ture;
+            } 
+        
+          else if (!$("#chkbox").is(":checked")) { 
+        
+             alert("개인 정보 취급/이용 약관에 동의해주세요");
+            return true;
+        }
+        
+
+
+ else {
                 alert("참여가 완료되었습니다");
                 $(".e2-pop .pop-last").addClass("on");
                 $(".e2-pop  .pop-info").removeClass("on");
             }
-
-
-
-
-        } else {
-            alert("개인 정보 취급/이용 약관에 동의해주세요");
-            return true;
-        }
 
 
 
