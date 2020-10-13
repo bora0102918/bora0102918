@@ -335,6 +335,11 @@ div {
 
 }
 
+.pop-info .map-check0 {
+    margin-top: 25px;
+
+}
+
 .pop-info .map-btn {
     background: url(img/zip-code.png);
     width: 114px;

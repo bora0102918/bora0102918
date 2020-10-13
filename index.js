@@ -6,15 +6,15 @@ $(function () {
         var sc = $(this).scrollTop();
         if (sc > 150) {
             $("nav").addClass("fixed");
-        } 
-        
-        
-        else {
+        } else {
             $("nav").removeClass("fixed");
         }
-        
-        
-        if(sc>4500){
+        if (sc < 4500) {
+            $("header .gnb").addClass("nav1");
+            $("header .gnb").removeClass("nav2");
+        }
+
+        if (sc > 4500) {
             $("header .gnb").addClass("nav2");
         }
     });
@@ -72,7 +72,7 @@ $(function () {
 
 
 
-    $(".phone-number-check").on('keydown', function (e) {
+    $(".phone-number-check, .phone-number-check0").on('keydown', function (e) {
         // 숫자만 입력받기
         var trans_num = $(this).val().replace(/-/gi, '');
         var k = e.keyCode;
@@ -197,9 +197,10 @@ $(function () {
     $(".ok li").on("click", function () {
 
         if ($(".ok li.click-ok").length >= 8) {
-            window.setTimeout(function() {
-            $(".e1-pop  .pop1").removeClass("on");
-            $(".e1-pop  .pop2").addClass("on");}, 500);
+            window.setTimeout(function () {
+                $(".e1-pop  .pop1").removeClass("on");
+                $(".e1-pop  .pop2").addClass("on");
+            }, 500);
         }
 
     });
@@ -236,38 +237,25 @@ $(function () {
     });
 
     $(".e1-pop .pop-info .okay").click(function () {
-        
-        if ($(".name-check").val() == '') {
-                alert("정보를 입력해주세요!");}
-        
-        else if ($(".phone-number-check").val() == '') {
-                alert("정보를 입력해주세요!");
-                return ture;
-            } 
-        
-              else if ($(".map-check").val() == '') {
-                alert("정보를 입력해주세요!");
-                return ture;
-            } 
-        
-          else if (!$("#chkbox0").is(":checked")) { 
-        
-             alert("개인 정보 취급/이용 약관에 동의해주세요");
-            return true;
+
+        if ($(".name-check0").val() == '') {
+            alert("정보를 입력해주세요!");
+        } else if ($(".phone-number-check0").val() == '') {
+            alert("정보를 입력해주세요!");
+
+        } else if ($(".map-check0").val() == '') {
+            alert("정보를 입력해주세요!");
+
+        } else if (!$("#chkbox0").is(":checked")) {
+
+            alert("개인 정보 취급/이용 약관에 동의해주세요");
+          
+        } else {
+            alert("참여가 완료되었습니다");
+            $(".e1-pop .pop-last").addClass("on");
+            $(".e1-pop  .pop-info").removeClass("on");
         }
-        
 
-
- else {
-                alert("참여가 완료되었습니다");
-                $(".e1-pop .pop-last").addClass("on");
-                $(".e1-pop  .pop-info").removeClass("on");
-            }
-
-
-
-
-       
 
 
 
@@ -305,37 +293,39 @@ $(function () {
 
 
     $(".e2-pop .pop-info .okay").click(function () {
-        
+
         if ($(".name-check").val() == '') {
-                alert("정보를 입력해주세요!");}
-        
-        else if ($(".phone-number-check").val() == '') {
-                alert("정보를 입력해주세요!");
-                return ture;
-            } 
-        
-              else if ($(".map-check").val() == '') {
-                alert("정보를 입력해주세요!");
-                return ture;
-            } 
-        
-          else if (!$("#chkbox").is(":checked")) { 
-        
-             alert("개인 정보 취급/이용 약관에 동의해주세요");
-            return true;
+            alert("정보를 입력해주세요!");
+        } else if ($(".phone-number-check").val() == '') {
+            alert("정보를 입력해주세요!");
+
+        } else if ($(".map-check").val() == '') {
+            alert("정보를 입력해주세요!");
+ 
+        } else if (!$("#chkbox").is(":checked")) {
+
+            alert("개인 정보 취급/이용 약관에 동의해주세요");
+     
+        } else {
+            alert("참여가 완료되었습니다");
+            $(".e2-pop .pop-last").addClass("on");
+            $(".e2-pop  .pop-info").removeClass("on");
         }
-        
 
 
- else {
-                alert("참여가 완료되었습니다");
-                $(".e2-pop .pop-last").addClass("on");
-                $(".e2-pop  .pop-info").removeClass("on");
-            }
+
+
+
+
 
 
 
     });
+
+
+
+
+
     $(".e2-pop .pop-last .okay").click(function () {
         $(".e2-pop .pop-last").removeClass("on");
 
