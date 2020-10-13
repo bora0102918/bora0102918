@@ -191,9 +191,11 @@ div {
     width: 690px;
     height: 3603px;
     display: none;
-
+padding-left: 30px;
     background: url(img/main-pop.png) no-repeat;
 }
+
+
 
 
 
