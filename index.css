@@ -848,3 +848,10 @@ footer .txt p:nth-child(2) {
 .nav3 {
     background: url(img/nav3.png)
 }
+
+
+@media (max-width:720px){
+    .body{
+        width: 720px;
+    }
+}
