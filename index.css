@@ -189,6 +189,12 @@ div {
 .pop-wrap2{
     width: 720px;
     margin: 0 auto;
+
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+    overflow: hidden;
 }
 
 .pop1,
