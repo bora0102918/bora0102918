@@ -144,17 +144,20 @@ $(function () {
 
     $(".main-kv .add .open").click(function () {
         $("#pop-wrap").addClass("on");
+        $("body").addClass("over");
         $(".pop-kv").addClass("on");
 
     });
 
     $(".main-kv .close").click(function () {
         $(".main-kv .add").hide();
+          $("body").removeClass("over");
     });
 
     $(".exit").click(function () {
         $("#pop-wrap").removeClass("on");
         $(".pop-kv").removeClass("on");
+          $("body").removeClass("over");
     });
 
 
@@ -223,6 +226,7 @@ $(function () {
 
     $(".event01-1 .join").click(function () {
         $("#pop-wrap").addClass("on");
+          $("body").addClass("over");
         $(".e1-pop .pop1").addClass("on");
         $(".ok li").removeClass("click-ok");
 
@@ -272,6 +276,7 @@ $(function () {
 
     // event02
     $(".event02-1 .join").click(function () {
+                  $("body").addClass("over");
         $("#pop-wrap").addClass("on");
         $(".e2-pop .pop1").addClass("on");
     });

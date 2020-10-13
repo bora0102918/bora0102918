@@ -858,4 +858,6 @@ footer .txt p:nth-child(2) {
     background: url(img/nav3.png)
 }
 
-
+.over{
+    overflow-y: hidden;
+}
