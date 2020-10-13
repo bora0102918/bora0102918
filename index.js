@@ -9,12 +9,12 @@ $(function () {
         } else {
             $("nav").removeClass("fixed");
         }
-        if (sc < 4500) {
+        if (sc < 4300) {
             $("header .gnb").addClass("nav1");
             $("header .gnb").removeClass("nav2");
         }
 
-        if (sc > 4500) {
+        if (sc > 4400) {
             $("header .gnb").addClass("nav2");
         }
     });
