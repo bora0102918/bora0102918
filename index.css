@@ -186,16 +186,7 @@ div {
     background: url(img/main-pop.png) no-repeat;
 }
 
-.pop-wrap2{
-    width: 720px;
-    margin: 0 auto;
 
-    height: 100%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%);
-    overflow: hidden;
-}
 
 .pop1,
 .pop2,
@@ -203,6 +194,7 @@ div {
 .pop-info,
 .pop-last {
     display: none;
+    position: fixed;
     margin: 0 auto;
     overflow-x: hidden;
 }
@@ -849,10 +841,3 @@ footer .txt p:nth-child(2) {
 .nav3 {
     background: url(img/nav3.png)
 }
-
-
-@media(max-width:720){
-    #pop-wrap{
-        width: 100vw;
-        
-    }}
