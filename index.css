@@ -50,9 +50,16 @@ li {
 .notice,
 footer {
     float: left;
-    width: 100%;
+
 }
 
+
+.event01-1,
+.event01-2,
+.event02-1,
+.event02-2{
+    width: 720px;
+}
 
 
 div {
@@ -546,7 +553,7 @@ div {
 .event01-1 {
     background: url(img/event01-1.png);
     height: 1498px;
-    width: 100%;
+  
 }
 
 
