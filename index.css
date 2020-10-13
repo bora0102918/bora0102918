@@ -123,6 +123,8 @@ div {
     height: 100%;
     padding: 5% 0 0 15%;
     bottom: 0;
+        overflow-x: hidden;
+
     overflow-y: scroll;
     display: none;
     z-index: 3;
