@@ -186,6 +186,10 @@ div {
     background: url(img/main-pop.png) no-repeat;
 }
 
+.pop-wrap2{
+    width: 720px;
+    margin: 0 auto;
+}
 
 .pop1,
 .pop2,
@@ -194,6 +198,7 @@ div {
 .pop-last {
     display: none;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .e1-pop .pop1 {
