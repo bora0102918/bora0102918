@@ -857,8 +857,3 @@ footer .txt p:nth-child(2) {
 }
 
 
-@media (max-width:720px){
-    .body{
-        width: 720px;
-    }
-}
