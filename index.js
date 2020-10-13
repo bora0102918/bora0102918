@@ -6,8 +6,16 @@ $(function () {
         var sc = $(this).scrollTop();
         if (sc > 150) {
             $("nav").addClass("fixed");
-        } else {
+        } 
+        
+        
+        else {
             $("nav").removeClass("fixed");
+        }
+        
+        
+        if(sc>4500){
+            $("header .gnb").addClass("nav2");
         }
     });
 
@@ -189,9 +197,9 @@ $(function () {
     $(".ok li").on("click", function () {
 
         if ($(".ok li.click-ok").length >= 8) {
-
+            window.setTimeout(function() {
             $(".e1-pop  .pop1").removeClass("on");
-            $(".e1-pop  .pop2").addClass("on");
+            $(".e1-pop  .pop2").addClass("on");}, 500);
         }
 
     });
@@ -228,16 +236,29 @@ $(function () {
     });
 
     $(".e1-pop .pop-info .okay").click(function () {
-        if ($("#chkbox0").is(":checked")) {
-
-            if ($(".name-check").val() == '') {
-                alert("정보를 입력해주세요!");
-
-                return ture;
-            } else if ($(".phone-number-check").val() == '') {
+        
+        if ($(".name-check").val() == '') {
+                alert("정보를 입력해주세요!");}
+        
+        else if ($(".phone-number-check").val() == '') {
                 alert("정보를 입력해주세요!");
                 return ture;
-            } else {
+            } 
+        
+              else if ($(".map-check").val() == '') {
+                alert("정보를 입력해주세요!");
+                return ture;
+            } 
+        
+          else if (!$("#chkbox0").is(":checked")) { 
+        
+             alert("개인 정보 취급/이용 약관에 동의해주세요");
+            return true;
+        }
+        
+
+
+ else {
                 alert("참여가 완료되었습니다");
                 $(".e1-pop .pop-last").addClass("on");
                 $(".e1-pop  .pop-info").removeClass("on");
@@ -246,10 +267,7 @@ $(function () {
 
 
 
-        } else {
-            alert("개인 정보 취급/이용 약관에 동의해주세요");
-            return true;
-        }
+       
 
 
 
