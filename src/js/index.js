@@ -345,6 +345,7 @@ $(function () {
     $(" .pop-last .okay").click(function () {
         $(" .pop-last").removeClass("on");
         $("#pop-wrap").removeClass("on");
+              $("body").removeClass("over");
     });
 
     // event02
