@@ -363,7 +363,7 @@ nav {
     border: 1px solid #e4e1d8;
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-
+text-indent: 15px;
 }
 
 
@@ -1077,11 +1077,11 @@ footer .txt p:nth-child(2) {
     }
 
     .pop-info input {
-        /*    font-size: 2rem;*/
+     
         margin-top: -6.2587vw;
-        /*    width: 61%;*/
+     
         height: 12.4478vw;
-        /*    border: 0.1391vw solid #e4e1d8;*/
+   text-indent: 2.0862vw;
         border-radius: 1.3908vw;
         box-shadow: 0.0000vw 0.0000vw 0.6954vw rgba(0, 0, 0, 0.2);
 
