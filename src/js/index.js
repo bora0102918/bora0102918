@@ -24,10 +24,10 @@ $(function () {
     
     $(window).scroll(function () {
         var sc = $(this).scrollTop();
-        var scrollH1 = $('.main-kv').offset().top ;
+        var scrollH1 = $('.event01-1').offset().top ;
         var scrollH2 = $('.event02-1').offset().top ;
 
-        
+             $("header .gnb").removeClass("nav3");
         if (sc > 150) {
             $("nav").addClass("fixed");
             $(".gnb2").addClass("on");
@@ -39,6 +39,10 @@ $(function () {
               $(".main-kv").removeClass("gap");
         }
         
+            if ($(document).scrollTop() < scrollH1) {
+            $("header .gnb").addClass("nav1");
+    
+        }
         
         if ($(document).scrollTop() < scrollH2) {
             $("header .gnb").addClass("nav1");
@@ -198,8 +202,10 @@ $(function () {
     });
 
     $('.evt03').on('click', function () {
-        $("header .gnb").addClass("nav3");
+
+          $("header .gnb").addClass("nav3");
         $("header .gnb").removeClass("nav2");
+
     });
 
     // main 
