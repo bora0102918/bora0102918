@@ -866,7 +866,9 @@ footer .txt p:nth-child(2) {
         width: 100vw;
     }
 
-
+#wrap{
+    width: 100vw;
+}
 
     .event02-1,
     .event02-2,
