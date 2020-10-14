@@ -16,6 +16,11 @@ li {
 
 
 
+html, body, button, input, .notice, footer {
+  font-family: 'NotoSansKR', '돋움', Dotum, Arial, sans-serif;
+
+}
+
 
 
 
