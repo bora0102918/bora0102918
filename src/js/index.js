@@ -2,23 +2,61 @@ $(function () {
 
     // top
 
+//    $(window).scroll(function () {
+//        var sc = $(this).scrollTop();
+//        if (sc > 150) {
+//            $("nav").addClass("fixed");
+//        } else {
+//            $("nav").removeClass("fixed");
+//        }
+//        if (sc < 4300) {
+//            $("header .gnb").addClass("nav1");
+//            $("header .gnb").removeClass("nav2");
+//        }
+//
+//        if (sc > 4400) {
+//            $("header .gnb").addClass("nav2");
+//        }
+//    });
+//    
+    
+
+    
     $(window).scroll(function () {
         var sc = $(this).scrollTop();
+        var scrollH1 = $('.main-kv').offset().top ;
+        var scrollH2 = $('.event02-1').offset().top ;
+
+        
         if (sc > 150) {
             $("nav").addClass("fixed");
+            $(".gnb2").addClass("on");
+            $(".main-kv").addClass("gap");
+    
         } else {
             $("nav").removeClass("fixed");
+             $(".gnb2").removeClass("on");
+              $(".main-kv").removeClass("gap");
         }
-        if (sc < 4300) {
+        
+        
+        if ($(document).scrollTop() < scrollH2) {
             $("header .gnb").addClass("nav1");
             $("header .gnb").removeClass("nav2");
         }
 
-        if (sc > 4400) {
+        if ($(document).scrollTop() > scrollH2) {
             $("header .gnb").addClass("nav2");
         }
     });
-
+    
+    
+    
+    
+    
+    
+    
+    
 
 
     //check
@@ -117,17 +155,42 @@ $(function () {
 
 
     $('.evt01').on('click', function () {
-        $('html, body').animate({
-            scrollTop: $(".event01-1").offset().top - 160
+        
+              var w = $(window).width();
+           var navH = $(".gnb").height();
+        
+
+        
+        if ( w< 719){
+            
+                         
+            
+            
+            $('html, body').animate({
+            scrollTop: $(".event01-1").offset().top - navH
+        }, 500);
+
+            }
+        
+        
+        else{
+                   $('html, body').animate({
+            scrollTop: $(".event01-1").offset().top - 80
         }, 500);
         $("header .gnb").addClass("nav1");
         $("header .gnb").removeClass("nav2");
-        $("header .gnb").removeClass("nav3");
+        $("header .gnb").removeClass("nav3"); 
+        }
+        
+        
+        
+        
+        
 
     });
     $('.evt02').on('click', function () {
         $('html, body').animate({
-            scrollTop: $(".event02-1").offset().top - 75
+            scrollTop: $(".event02-1").offset().top + 10
         }, 500);
 
         $("header .gnb").addClass("nav2");
@@ -151,13 +214,13 @@ $(function () {
 
     $(".main-kv .close").click(function () {
         $(".main-kv .add").hide();
-          $("body").removeClass("over");
+        $("body").removeClass("over");
     });
 
     $(".exit").click(function () {
         $("#pop-wrap").removeClass("on");
         $(".pop-kv").removeClass("on");
-          $("body").removeClass("over");
+        $("body").removeClass("over");
     });
 
 
@@ -226,7 +289,7 @@ $(function () {
 
     $(".event01-1 .join").click(function () {
         $("#pop-wrap").addClass("on");
-          $("body").addClass("over");
+        $("body").addClass("over");
         $(".e1-pop .pop1").addClass("on");
         $(".ok li").removeClass("click-ok");
 
@@ -253,7 +316,7 @@ $(function () {
         } else if (!$("#chkbox0").is(":checked")) {
 
             alert("개인 정보 취급/이용 약관에 동의해주세요");
-          
+
         } else {
             alert("참여가 완료되었습니다");
             $(".e1-pop .pop-last").addClass("on");
@@ -276,7 +339,7 @@ $(function () {
 
     // event02
     $(".event02-1 .join").click(function () {
-                  $("body").addClass("over");
+        $("body").addClass("over");
         $("#pop-wrap").addClass("on");
         $(".e2-pop .pop1").addClass("on");
     });
@@ -306,11 +369,11 @@ $(function () {
 
         } else if ($(".map-check").val() == '') {
             alert("정보를 입력해주세요!");
- 
+
         } else if (!$("#chkbox").is(":checked")) {
 
             alert("개인 정보 취급/이용 약관에 동의해주세요");
-     
+
         } else {
             alert("참여가 완료되었습니다");
             $(".e2-pop .pop-last").addClass("on");
