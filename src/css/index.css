@@ -1241,7 +1241,10 @@ footer .txt p:nth-child(2) {
     footer img {
         width: 50vw;
     }
-
+.open{
+ height: 5.5633vw;
+    width: 19.4715vw;
+}
 
 
 }
