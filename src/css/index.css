@@ -451,9 +451,9 @@ nav {
 .pop-info .pop-info-content {
     padding: 5%;
     width: 75%;
-    height: 17.2%;
+    height: 17%;
     margin: 0 auto;
-    top: 27.8%;
+    top: 28%;
     position: relative;
     overflow-y: scroll;
     font-size: 1.2rem;
@@ -951,7 +951,7 @@ footer .txt p:nth-child(2) {
     .notice li {
         font-size: 3.5vw !important;
         margin-top: 2.2253vw;
-        letter-spacing: 0;
+        letter-spacing: -0.2pt;
     }
 
     .notice li span {
