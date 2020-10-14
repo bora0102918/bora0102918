@@ -24,36 +24,38 @@ $(function () {
     
     $(window).scroll(function () {
         var sc = $(this).scrollTop();
-        var scrollH1 = $('.event01-1').offset().top ;
+        var scrollH1 = $('.event01-1').offset().top - 100;
         var scrollH2 = $('.event02-1').offset().top ;
 
              $("header .gnb").removeClass("nav3");
-        if (sc > 150) {
+
+        
+            if (sc > 150) {
             $("nav").addClass("fixed");
             $(".gnb2").addClass("on");
             $(".main-kv").addClass("gap");
     
-        } else {
+        }else {
             $("nav").removeClass("fixed");
              $(".gnb2").removeClass("on");
               $(".main-kv").removeClass("gap");
         }
         
-            if ($(document).scrollTop() < scrollH1) {
-            $("header .gnb").addClass("nav1");
+        
+        if ($(document).scrollTop() < scrollH1) {
+            $("header .gnb").addClass("nav0");
     
         }
-        
-        if ($(document).scrollTop() < scrollH2) {
+             if ($(document).scrollTop() > scrollH1) {
             $("header .gnb").addClass("nav1");
             $("header .gnb").removeClass("nav2");
         }
-
-        if ($(document).scrollTop() > scrollH2) {
+        
+             if ($(document).scrollTop() > scrollH2) {
             $("header .gnb").addClass("nav2");
         }
     });
-    
+   
     
     
     

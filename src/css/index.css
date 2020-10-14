@@ -834,6 +834,10 @@ footer .txt p:nth-child(2) {
     display: block !important;
 }
 
+
+.nav0{
+    background: url(../img/nav.png) no-repeat;
+}
 .nav1 {
     background: url(../img//nav1.png)
 }
@@ -920,7 +924,8 @@ footer .txt p:nth-child(2) {
 
     .gnb {
         width: 100vw;
-        height: 12.7955vw
+        height: 12.7955vw;
+            background-size: contain;
     }
 
     .nav1,
