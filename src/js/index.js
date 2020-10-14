@@ -43,7 +43,8 @@ $(function () {
         
         
         if ($(document).scrollTop() < scrollH1) {
-            $("header .gnb").addClass("nav0");
+            $("header .gnb").addClass("nav00");
+              $("header .gnb").removeClass("nav0");
               $("header .gnb").removeClass("nav2");
               $("header .gnb").removeClass("nav1");
     

@@ -833,8 +833,13 @@ footer .txt p:nth-child(2) {
 .on {
     display: block !important;
 }
+.nav00{
+    background: url(../img/nav0.png) no-repeat;
+}
 
-
+.nav-0{
+    background: url(../img/nav0.png) no-repeat;
+}
 .nav0{
     background: url(../img/nav.png) no-repeat;
 }
