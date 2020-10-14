@@ -44,6 +44,8 @@ $(function () {
         
         if ($(document).scrollTop() < scrollH1) {
             $("header .gnb").addClass("nav0");
+              $("header .gnb").removeClass("nav2");
+              $("header .gnb").removeClass("nav1");
     
         }
              if ($(document).scrollTop() > scrollH1) {
