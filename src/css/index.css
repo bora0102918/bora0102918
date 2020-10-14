@@ -99,23 +99,29 @@ nav {
 }
 
 
-.open {
 
-    height: 40px;
-    width: 140px;
+
+.open {
+    height: 150px;
+    width: 150px;
     cursor: pointer;
-    top: 45%;
-    margin:
-        auto;
+    top: 15%;
+    margin: auto;
     position: relative;
 }
+
+
+
+
+
+
 
 .close {
 
     height: 65px;
     width: 70px;
     margin: 0 auto;
-    top: 57%;
+    top: 20%;
     position: relative;
     cursor: pointer;
 }
@@ -837,7 +843,8 @@ footer .txt p:nth-child(2) {
 
 
 .gap {
-    margin-top: 50px;
+/*    margin-top: 50px;*/
+    margin-top: -50px;
 }
 
 
@@ -944,6 +951,7 @@ footer .txt p:nth-child(2) {
     .notice li {
         font-size: 3.5vw !important;
         margin-top: 2.2253vw;
+        letter-spacing: 0;
     }
 
     .notice li span {
@@ -1093,7 +1101,8 @@ footer .txt p:nth-child(2) {
     .pop-info .map-btn {
         background-size: contain;
         width: 15.8554vw;
-        height: 12.7955vw;
+        height: 12.7055vw;
+        top: 37.7%;
 
     }
 
@@ -1241,10 +1250,22 @@ footer .txt p:nth-child(2) {
     footer img {
         width: 50vw;
     }
-.open{
- height: 5.5633vw;
-    width: 19.4715vw;
-}
 
+.open {
+    height: 20.8623vw;
+    width: 20.8623vw;
+
+    
+}
+    
+    
+    
+    
+    
+.gap {
+
+    margin-top: -6.9541vw;
+}
+    
 
 }
