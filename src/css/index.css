@@ -466,9 +466,9 @@ text-indent: 15px;
 .pop-info .pop-info-content {
     padding: 5%;
     width: 75%;
-    height: 17%;
+    height: 16%;
     margin: 0 auto;
-    top: 28%;
+    top: 29%;
     position: relative;
     overflow-y: scroll;
     font-size: 1.2rem;
@@ -629,7 +629,7 @@ text-indent: 15px;
 .check-box input[id="chkbox4"] + label,
 .check-box input[id="chkbox6"] + label {
 
-    top: 50%;
+    top: 47%;
     position: absolute;
     left: 0;
 }
@@ -647,8 +647,8 @@ text-indent: 15px;
 
 .e2-pop .check-box {
     position: relative;
-    top: 45%;
-    left: 20%;
+    top: 45.5%;
+    left: 21%;
 
     height: 25%;
 
