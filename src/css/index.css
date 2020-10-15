@@ -730,7 +730,7 @@ text-indent: 15px;
     position: absolute;
     top: 65%;
     z-index: 1;
-
+left:0;
 
 }
 
@@ -1302,6 +1302,20 @@ footer .txt p:nth-child(2) {
 
     margin-top: -6.9541vw;
 }
+    
+    
+/*     1015 14:48 add */
+    .e1-pop .pop2 .join2{
+    background-size: contain;
+    }
+    
+    
+
+    .add {
+    top: 65%;
+ }
+    
+    
     
 
 }
