@@ -309,6 +309,12 @@ nav {
     opacity: 1 !important;
 }
 
+/* 1015 14:31 add*/
+.e1-pop .pop2 .join2{
+    background: url(../img/input.png) no-repeat;
+}
+
+
 
 .e1-pop .pop-info,
 .e1-pop .pop-last {
@@ -722,8 +728,7 @@ text-indent: 15px;
 
 .add {
     position: absolute;
-    top: 82%;
-    right: 0%;
+    top: 65%;
     z-index: 1;
 
 
