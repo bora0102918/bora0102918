@@ -1,8 +1,7 @@
 $(function () {
 
     
-        
-    $(document).ready(function() {
+
 
         
 
