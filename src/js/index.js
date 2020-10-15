@@ -4,26 +4,9 @@ $(function () {
         
     $(document).ready(function() {
 
-	// 기존 css에서 플로팅 배너 위치(top)값을 가져와 저장한다.
-	var floatPosition = parseInt($(".add").css('top'));
-	// 250px 이런식으로 가져오므로 여기서 숫자만 가져온다. parseInt( 값 );
+        
+        
 
-	$(window).scroll(function() {
-		// 현재 스크롤 위치를 가져온다.
-		var scrollTop = $(window).scrollTop();
-		var newPosition = scrollTop + floatPosition + "px";
-
-//		/* 애니메이션 없이 바로 따라감
-//		 $("#floatMenu").css('top', newPosition);
-//		 */
-
-		$(".add").stop().animate({
-			"top" : newPosition
-		}, 500);
-
-	}).scroll();
-
-});
     
     
     // top
@@ -52,14 +35,16 @@ $(function () {
         var sc = $(this).scrollTop();
         var scrollH1 = $('.event01-1').offset().top - 100;
         var scrollH2 = $('.event02-1').offset().top ;
-
+        var w = $(window).width();
              $("header .gnb").removeClass("nav3");
 
         
+
             if (sc > 150) {
             $("nav").addClass("fixed");
             $(".gnb2").addClass("on");
             $(".main-kv").addClass("gap");
+                    
     
         }else {
             $("nav").removeClass("fixed");
@@ -83,6 +68,10 @@ $(function () {
              if ($(document).scrollTop() > scrollH2) {
             $("header .gnb").addClass("nav2");
         }
+        
+    
+        
+      
     });
    
     
