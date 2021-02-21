@@ -55,6 +55,15 @@ body {
   li {
     list-style: none;
   }
+
+  input{
+      font-size: 2vw;
+      text-align: center;
+      line-height: 3vw;
+      border-radius: 1vw;
+  }
+
+  
   .task_box ul {
     text-align: center;
     width: 30vw;
@@ -67,10 +76,10 @@ body {
   
   .task_box li {
     font-size: 2vw;
-    border: 1px solid red;
     text-align: right;
     padding-right: 2vw;
   }
+  
   .cnt_task .finbtn,
   .cnt_task .delbtn {
     display: inline-block;

@@ -159,7 +159,6 @@ function init() {
 
   function loadTask() {
     const getTask = localStorage.getItem(TASK);
-    const getFin = localStorage.getItem(FIN);
 
     if (getTask !== null) {
       const taskString = JSON.parse(getTask);
@@ -167,12 +166,18 @@ function init() {
         addTask(todo.id, todo.text);
       });
     }
+  
+  }
+
+  function loadFin(){
+    const getFin = localStorage.getItem(FIN);
     if (getFin !== null) {
-      const FinString = JSON.parse(getFin);
-      FinString.forEach(function (td) {
-        addFin(td.id, td.text);
-      });
-    }
+        const FinString = JSON.parse(getFin);
+        FinString.forEach(function (td) {
+          addFin(FIN,td.id, td.text);
+        });
+      }
+
   }
 
   function deleteE(event) {
@@ -201,41 +206,37 @@ function init() {
   function doneE(event) {
     const btn = event.target;
     const li = btn.parentNode;
-  }
+}
 
-  function addFin(listString, text, id) {
-    const li = document.querySelector("li");
+  function prevE(event) {
+    const btn = event.target;
+    const li = btn.parentNode;
+    taskList.appendChild(li);
 
-    finishList.appendChild(li);
-
-    const finishObj = {
-      text,
-      id: li.id
-    };
-    finArray.push(finishObj);
+    const cleanF = finArray.filter(function (finishObj) {
+      return finishObj.id !== li.id;
+    });
+    finArray = cleanF;
     saveFin();
-
-    const prevBtn = document.querySelectorAll(".prevbtn");
-    prevBtn.innerHTML = "sssss";
-    prevBtn.forEach(function (prev) {
-      prev.addEventListener("click", prevE);
-    });
-
-    const doneBtn = document.querySelectorAll(".donebtn");
-    doneBtn.forEach(function (done) {
-      done.addEventListener("click", doneE);
-    });
   }
+
 
   function finishE(event) {
     const btn = event.target;
     const li = btn.parentNode;
+    
+    const finishObj = {
+        text:li.firstChild.innerText,
+        id: li.id
+      };
+      finArray.push(finishObj);
+    saveFin();
+
     finishList.appendChild(li);
-    const cleanF = finArray.filter(function (taskObj) {
-      return taskObj.id !== li.id;
-    });
-    finArray = cleanF;
-    addFin();
+
+    // loadFin()
+// loadTask();
+    // addFin();
   }
 
   let idNumbers = 1;
@@ -283,6 +284,18 @@ function init() {
       fin.addEventListener("click", finishE);
     });
 
+    const prevBtn = document.querySelectorAll(".prevbtn");
+    prevBtn.forEach(function (prev) {
+      prev.addEventListener("click", prevE);
+    });
+
+    const doneBtn = document.querySelectorAll(".donebtn");
+    doneBtn.forEach(function (done) {
+      done.addEventListener("click", doneE);
+    });
+
+
+
     const taskObj = {
       text,
       id: li.id
@@ -298,5 +311,6 @@ function init() {
   bgChange();
   loadName();
   loadTask();
+  loadFin();
 }
 init();
