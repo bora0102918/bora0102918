@@ -1,3 +1,4 @@
+
 function init() {
   function getTime() {
     const currentTime = new Date();
@@ -200,12 +201,7 @@ function init() {
   function doneE() {}
 
   function addFin(listString, text, id) {
-    // const li = document.createElement("li");
-    // const span = document.createElement("span");
-    // const taskId = idNumbers;
     const li = document.querySelector("li");
-    // idNumbers += 1;
-    // li.id = taskId;
 
     finishList.appendChild(li);
 
@@ -216,19 +212,8 @@ function init() {
     finArray.push(finishObj);
     saveFin();
 
-    const makePrev = document.createElement("button");
-    const makeDone = document.createElement("button");
-
-    li.appendChild(makePrev);
-    li.appendChild(makeDone);
-
-    makePrev.classList.add("prevbtn");
-    makeDone.classList.add("donebtn");
-
-    makePrev.innerText = "⏪";
-    makeDone.innerText = "⭕";
-
     const prevBtn = document.querySelectorAll(".prevbtn");
+    prevBtn.innerHTML = "sssss";
     prevBtn.forEach(function (prev) {
       prev.addEventListener("click", prevE);
     });
@@ -237,13 +222,13 @@ function init() {
     doneBtn.forEach(function (done) {
       done.addEventListener("click", doneE);
     });
+
   }
 
   function finishE(event) {
     const btn = event.target;
     const li = btn.parentNode;
     finishList.appendChild(li);
-
     const cleanF = finArray.filter(function (taskObj) {
       return taskObj.id !== li.id;
     });
@@ -268,14 +253,23 @@ function init() {
 
     const makeDel = document.createElement("button");
     const makeFin = document.createElement("button");
+    const makePrev = document.createElement("button");
+    const makeDone = document.createElement("button");
 
     li.appendChild(makeDel);
     li.appendChild(makeFin);
+    li.appendChild(makePrev);
+    li.appendChild(makeDone);
+
     makeFin.classList.add("finbtn");
     makeDel.classList.add("delbtn");
+    makePrev.classList.add("prevbtn");
+    makeDone.classList.add("donebtn");
 
     makeFin.innerText = "✅";
     makeDel.innerText = "❌";
+    makePrev.innerText = "⏪";
+    makeDone.innerText = "⭕";
 
     const delBtn = document.querySelectorAll(".delbtn");
     delBtn.forEach(function (del) {
