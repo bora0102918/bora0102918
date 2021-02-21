@@ -198,7 +198,10 @@ function init() {
     saveFin();
   }
 
-  function doneE() {}
+  function doneE(event) {
+    const btn = event.target;
+    const li = btn.parentNode;
+  }
 
   function addFin(listString, text, id) {
     const li = document.querySelector("li");
@@ -222,7 +225,6 @@ function init() {
     doneBtn.forEach(function (done) {
       done.addEventListener("click", doneE);
     });
-
   }
 
   function finishE(event) {
