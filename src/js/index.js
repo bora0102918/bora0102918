@@ -1,4 +1,3 @@
-import "./styles.css";
 function init() {
   function getTime() {
     const currentTime = new Date();
