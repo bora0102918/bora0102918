@@ -1,4 +1,42 @@
-* {
+h1 {
+    border: 3px solid red;
+  }
+  
+  .abs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+  }
+  
+  .off {
+    display: none;
+  }
+  
+  .cnt_task .finbtn,
+  .cnt_task .delbtn {
+    display: inline-block;
+  }
+  .cnt_task button {
+    display: none;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -1318,4 +1356,4 @@ footer .txt p:nth-child(2) {
     
     
 
-}
+} */
